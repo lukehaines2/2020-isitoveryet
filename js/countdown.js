@@ -9,13 +9,9 @@ class CountDown {
   setExpiredDate(expiredDate) {
     // get the current time
     const currentTime = new Date().getTime();
-
     // calculate the remaining time 
     this.timeRemaining = expiredDate.getTime() - currentTime;
-
-    this.timeRemaining <= 0 ?
-      this.complete() :
-      this.start();
+    this.timeRemaining <= 0 ? this.complete() : this.start();
   }
 
 
@@ -61,4 +57,3 @@ class CountDown {
     }, 1000);
   }
 }
-
